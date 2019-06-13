@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>魔方</title>
+		<style>
+			a{
+				color: skyblue;
+				display: inline-block;
+				margin-right: 20px;
+				text-align: center;
+				transform:translate(calc(50vw - 120px),calc(20vh - 100px));
+			}
+			.wutai {
+				position: relative;
+				width: 300px;
+				height: 300px;
+				margin: 150px auto 0;
+				transform-style: preserve-3D;
+				perspective: 2600px;
+				perspective-origin: -150% -100%;
+				animation: animate 6s infinite;
+			}
+			@keyframes animate {
+				0% {
+					transform: translate(-300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+				}
+				50% {
+					transform: translate(300px) rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+				}
+				100% {
+					transform: translate(-300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+				}
+			}
+			.wutai ul {
+				width: 250px;
+				height: 250px;
+				position: absolute;
+				font-size: 200px;
+				text-align: center;
+				line-height: 250px;
+				color: #fff;
+			}
+			.wutai li {
+				float: left;
+				width: 45px;
+				height: 45px;
+				border-radius: 30%;
+				margin: 10px;
+				list-style: none;
+				font-size: 30px;
+				text-align: center;
+				line-height: 45px;
+			}
+			.left {
+				transform: translateX(-110px) rotateY(90deg);
+			}
+			.left li {
+				background-color: yellow;
+				opacity: 0.9;
+			}
+			.right {
+				transform: translateX(100px) rotateY(90deg);
+			}
+			.right li {
+				background-color: pink;
+				opacity: 0.9;
+			}
+			.top {
+				transform: translateY(-120px) rotateX(90deg);
+			}
+			.top li {
+				background-color: deeppink;
+				opacity: 0.9;
+			}
+			.bottom {
+				transform: translateY(100px) rotateX(90deg);
+			}
+			.bottom li {
+				background-color: greenyellow;
+				opacity: 0.9;
+			}
+			.after {
+				transform: translateZ(-100px);
+			}
+			.after li {
+				background-color: paleturquoise;
+				opacity: 0.9;
+			}
+			.before {
+				transform: translateZ(100px);
+			}
+			.before li {
+				background-color: #a9f;
+				opacity: 0.9;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wutai">
+			<!-- 六个ul作为立方体的六个面。 -->
+			<ul class="after">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+			<ul class="left">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+			<ul class="right">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+			<ul class="top">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+			<ul class="bottom">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+			<ul class="before">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+		<a href="demo09_3d.html">点击跳转下一页</a>
+		<a href="demo07_3d.html">返回</a>
+	</body>
+</html>

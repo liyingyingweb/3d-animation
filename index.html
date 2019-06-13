@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d-卡片翻转</title>
+    <style>
+		html,body{
+			padding: 0;
+			margin: 0;
+			background:#ff9f96;
+		}
+		.wutai{
+			width: 300px;
+			height: 300px;
+			perspective: 800px;   /*设置透视 距离屏幕800px的摄像头*/
+			transform:translate(calc(50vw - 120px),calc(50vh - 150px));
+		}
+		.wutai a{
+			color: skyblue;
+			display: inline-block;
+			margin-right: 20px;
+			text-align: center;
+		}
+		.mofang{
+			width: 300px;
+			height: 300px;
+			position: relative;
+			transform-style: preserve-3d;   /*把mofang变为3D空间,想象为一个舞台*/
+			transition: transform 1s linear;
+		}
+		.box1{
+			width: 249px;
+			height: 206px;
+			position: absolute;
+			background: url(images/pic1.png);
+			backface-visibility: hidden;    /*设置为背面隐藏*/
+		}
+		.box2{
+			width: 249px;
+			height: 206px;
+			position: absolute;
+			background: url(images/flower.jpg);
+			transform: rotateY(180deg);    /*在原地旋转180度*/
+			background-size: 100% 100%;
+			backface-visibility: hidden;
+		}
+		.mofang:hover{
+			transform: rotateY(180deg);  /*鼠标移到mofang上原地旋转180度*/
+		}
+    </style>
+</head>
+<body>
+	<div class="wutai">
+		<div class="mofang">
+			<div class="box1"></div>
+			<div class="box2"></div>
+		</div>
+		<a href="demo05_3d.html">点击跳转下一页</a>
+	</div>
+</body>
+</html>

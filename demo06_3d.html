@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d-长方形</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+		a{
+			color: skyblue;
+			display: inline-block;
+			margin-right: 20px;
+			text-align: center;
+			transform:translate(calc(50vw - 120px),calc(20vh - 100px));
+		}
+        .wutai{
+            width: 900px;
+            height: 600px;
+            border: 1px solid;
+            margin: 0 auto;
+            perspective: 1000px;
+            perspective-origin: 50% 1%;
+        }
+        .wutai ul{
+            width: 100px;
+            height: 300px;
+            position: relative;
+            margin: 0 auto;
+            top: 150px;
+            transform-style:preserve-3d;
+        }
+        .wutai:hover ul{
+            transform: rotateY(36000000deg);
+            transition: all 1000000s linear;
+        }
+        .wutai li{
+            width: 100px;
+            height: 300px;
+            position: absolute;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            color: white;
+        }
+        li:nth-child(1){
+            background: rgba(255,0,0,0.6);
+            transform: rotateY(30deg) translateZ(200px);
+        }
+        li:nth-child(2){
+            background: rgba(0,255,0,0.6);
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        li:nth-child(3){
+            background: rgba(225,225,0,0.6);
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        li:nth-child(4){
+            background: rgba(225,0,225,0.6);
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        li:nth-child(5){
+            background: rgba(0,225,225,0.6);
+            transform: rotateY(150deg) translateZ(200px);
+        }
+        li:nth-child(6){
+            background: rgba(225,0,0,0.6);
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        li:nth-child(7){
+            background: rgba(225,0,225,0.6);
+            transform: rotateY(210deg) translateZ(200px);
+        }
+        li:nth-child(8){
+            background: rgba(0,0,225,0.6);
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        li:nth-child(9){
+            background: rgba(0,225,225,0.6);
+            transform: rotateY(270deg) translateZ(200px);
+        }
+        li:nth-child(10){
+            background: rgba(225,225,0,0.6);
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        li:nth-child(11){
+            background: rgba(225,0,225,0.6);
+            transform: rotateY(330deg) translateZ(200px);
+        }
+        li:nth-child(12){
+            background: rgba(0,225,225,0.6);
+            transform: rotateY(360deg) translateZ(200px);
+        }
+    </style>
+</head>
+<body>	
+	<div class="wutai">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+	</div>
+	<a href="demo07_3d.html">点击跳转下一页</a>
+	<a href="demo05_3d.html">返回</a>
+</body>
+</html>

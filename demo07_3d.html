@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3d-立方体</title>
+		<style>
+			*{
+				margin: 0;padding: 0;
+			}
+			html,body{
+				height: 100%;
+				background: black;
+			}
+			a{
+				color: skyblue;
+				display: inline-block;
+				margin-right: 20px;
+				text-align: center;
+			}
+			.wutai{
+				height: 100%;position: relative;
+				transform-style:preserve-3d;
+				perspective:0px;
+				animation:mydhua 8s linear infinite;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin:-100px 0 0 -100px; 
+				line-height: 200px;
+				text-align: center;
+				font-size: 48px;
+				color: white;
+			}
+			.box1{
+				transform:rotatey(90deg) translatez(-100px);
+				background: rgba(128,0,128,.5);
+			}
+			.box2{
+				transform:rotatey(90deg) translatez(100px);
+				background: rgba(255,0,255,.5);
+			}
+			.box3{
+				transform:rotatex(90deg) translatez(100px);
+				background: rgba(255,153,204,.5);
+			}
+			.box4{
+				transform:rotatex(90deg) translatez(-100px);
+				background: rgba(0,204,255,.5);
+			}
+			.box5{
+				transform:translatez(-100px);
+				background: rgba(153,204,255,.5);
+			}
+			.box6{
+				transform:translatez(100px);
+				background: rgba(0,255,255,.5);
+			}
+			@keyframes mydhua{
+				0%{transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);transform-origin: center center;}
+				100%{transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);transform-origin: center center; }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wutai">
+			<div class="box box1">1</div>
+			<div class="box box2">2</div>
+			<div class="box box3">3</div>
+			<div class="box box4">4</div>
+			<div class="box box5">5</div>
+			<div class="box box6">6</div>
+		</div>
+		<a href="demo08_3d.html">点击跳转下一页</a>
+		<a href="demo06_3d.html">返回</a>
+	</body>
+</html>

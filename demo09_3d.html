@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			a{
+				color: skyblue;
+				display: inline-block;
+				margin-right: 20px;
+				text-align: center;
+				transform:translate(calc(50vw - 120px),calc(20vh - 100px));
+			}
+			.box{
+				width: 600px;
+				height: 600px;
+				margin: 0 auto;
+				border: 1px solid;
+			}
+			.box img{
+				width: 249px;
+				height: 322px;
+				margin: 150px 0 0 150px;
+				transform: rotateX(40deg) rotateY(10deg) rotateZ(-30deg);
+				box-shadow: -5px 5px 5px 3px #8c8c8c;
+				transition: all 1s linear;
+			}
+			.box img:hover{
+				transform: rotate(0deg);
+				box-shadow: -50px 50px 5px 3px white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="images/qie.png" alt="">
+		</div>
+		<a href="index.html">点击跳转第一页</a>
+	</body>
+</html>
